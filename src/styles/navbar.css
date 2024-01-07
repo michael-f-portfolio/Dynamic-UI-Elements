@@ -1,0 +1,62 @@
+nav {
+    font-size: 1.5rem;
+    border-radius: 4px;
+}
+
+.navTitle {
+    cursor: pointer;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 10vw;
+    background-color: var(--slate-300);
+    border-radius: 4px;
+}
+
+.navList li {
+    cursor: pointer;
+    padding-right: 64px;
+    padding-left: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.navList li:first-child {
+    margin-top: 6px;
+}
+
+.navList li:last-child {
+    margin-bottom: 6px;
+}
+
+.navList a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+.navList li:hover {
+    background-color: var(--slate-400);
+}
+
+.navShow {
+    visibility: visible;
+    height: fit-content;
+}
+
+.navHide {
+    visibility: hidden;
+    height: 0;
+}
+
+.navActive {
+    color: var(--slate-200);
+}
