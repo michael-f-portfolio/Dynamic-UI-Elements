@@ -1,5 +1,6 @@
 import Header from "components/header";
 import Footer from "components/footer";
+import NavBar from "../../components/navbar";
 
 export default class MyController {
   constructor() {
@@ -10,6 +11,11 @@ export default class MyController {
 
   initialize() {
     this.header = new Header(this.body, "My Template Header Title");
+    this.navBar = new NavBar(this.header.header, "Navigation", [
+      { src: "#", textContent: "Link 1" },
+      { src: "#", textContent: "Link 2" },
+      { src: "#", textContent: "Link 3" },
+    ]);
     this.footer = new Footer(
       this.body,
       this.copyrightInfo,
