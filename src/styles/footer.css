@@ -1,0 +1,31 @@
+footer {
+    font-family: "Roboto-300";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--slate-600);
+    height: max-content;
+    margin-top: 30px;
+    padding: 8px;
+    /* Absolute Positioning makes box-shadow not show */
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+}
+
+footer a, footer a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer img {
+    width: 1.3rem;
+    padding-left: 8px;
+}
