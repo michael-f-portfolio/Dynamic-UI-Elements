@@ -1,13 +1,13 @@
-nav {
+nav.desktopNav {
     font-size: 1.5rem;
     border-radius: 4px;
 }
 
-.navTitle {
+nav.desktopNav .navTitle {
     cursor: pointer;
 }
 
-.navList {
+nav.desktopNav .navList {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -19,7 +19,7 @@ nav {
     border-radius: 4px;
 }
 
-.navList li {
+nav.desktopNav .navList li {
     cursor: pointer;
     padding-right: 64px;
     padding-left: 4px;
@@ -28,35 +28,45 @@ nav {
     border-radius: 4px;
 }
 
-.navList li:first-child {
+nav.desktopNav .navList li:first-child {
     margin-top: 6px;
 }
 
-.navList li:last-child {
+nav.desktopNav .navList li:last-child {
     margin-bottom: 6px;
 }
 
-.navList a {
+nav.desktopNav .navList a {
     text-decoration: none;
     color: inherit;
     font-size: 1.2rem;
     padding: 8px;
 }
 
-.navList li:hover {
+nav.desktopNav .navList li:hover {
     background-color: var(--slate-400);
 }
 
-.navShow {
+nav.desktopNav .navShow {
     visibility: visible;
     height: fit-content;
 }
 
-.navHide {
+nav.desktopNav .navHide {
     visibility: hidden;
     height: 0;
 }
 
-.navActive {
+nav.desktopNav .navActive {
     color: var(--slate-200);
+}
+
+@media screen and (max-width: 610px) {
+    nav.desktopNav * {
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+        height: 0;
+        width: 0;
+    }
 }

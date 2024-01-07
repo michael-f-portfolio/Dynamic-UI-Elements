@@ -1,8 +1,9 @@
-import "styles/navbar.css";
+import "styles/mobileNavBar.css";
 
-export default class NavBar {
+export default class MobileNavBar {
   constructor(elementToAppendTo, navTitle, links = []) {
     this.navBar = document.createElement("nav");
+    this.navBar.classList.add("mobileNav");
 
     this.navTitleContainer = document.createElement("div");
     this.navTitleContainer.textContent = navTitle;
@@ -24,12 +25,22 @@ export default class NavBar {
 
     elementToAppendTo.appendChild(this.navBar);
 
-    this.navBar.addEventListener("mouseover", () => {
-      this.navBarUnorderedList.classList.replace("navHide", "navShow");
-      this.navTitleContainer.classList.add("navActive");
+    this.navBar.addEventListener("touchstart", () => {
+      if (this.navTitleContainer.classList.contains("navActive")) {
+        this.navBarUnorderedList.classList.replace("navShow", "navHide");
+        this.navTitleContainer.classList.remove("navActive");
+      } else {
+        this.navBarUnorderedList.classList.replace("navHide", "navShow");
+        this.navTitleContainer.classList.add("navActive");
+      }
     });
 
-    this.navBar.addEventListener("mouseleave", () => {
+    // this.navBar.addEventListener("mouseleave", () => {
+    //   this.navBarUnorderedList.classList.replace("navShow", "navHide");
+    //   this.navTitleContainer.classList.remove("navActive");
+    // });
+
+    window.addEventListener("mouseleave", () => {
       this.navBarUnorderedList.classList.replace("navShow", "navHide");
       this.navTitleContainer.classList.remove("navActive");
     });
