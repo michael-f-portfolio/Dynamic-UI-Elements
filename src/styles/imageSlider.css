@@ -35,8 +35,8 @@ div.moveImageLeft, div.moveImageRight {
 }
 
 div.imageSlides > img {
-    width: 400px;
-    height: 400px;
+    max-width: 720px;
+    max-height: 480px;
 }
 
 
