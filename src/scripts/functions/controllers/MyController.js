@@ -2,6 +2,7 @@ import Header from "components/header";
 import Footer from "components/footer";
 import DesktopNavBar from "../../components/desktopNavBar";
 import MobileNavBar from "../../components/mobileNavBar";
+import ImageSlider from "../../components/imageSlider";
 
 export default class MyController {
   constructor() {
@@ -30,6 +31,8 @@ export default class MyController {
         { src: "#", textContent: "Link 3" },
       ]
     );
+
+    this.imageSlider = new ImageSlider(this.body);
     this.footer = new Footer(
       this.body,
       this.copyrightInfo,

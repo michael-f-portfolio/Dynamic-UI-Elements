@@ -1,0 +1,67 @@
+.imageSlider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 16px;
+    width: min-content;
+    /* border: 1px solid black; */
+    background-color: var(--slate-300);
+    border-radius: 4px;
+}
+
+.imageNavigator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--slate-400);
+}
+
+div.imageNavigator > div {
+    display: flex;
+
+}
+
+div.moveImageLeft, div.moveImageRight {
+    /* border: 1px solid black; */
+    /* height: ; */
+}
+.moveImageLeft img, .moveImageRight img {
+    width: 4rem;
+    cursor: pointer;
+}
+
+div.imageSlides > img {
+    width: 400px;
+    height: 400px;
+}
+
+
+div.imageSlides img.hideSlide {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+div.imageNavigator div.showSlide img:last-child {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+div.imageNavigator div.hideSlide img:first-child {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+div.imageNavigator > div > img {
+    width: 20px;
+    cursor: pointer;
+}
