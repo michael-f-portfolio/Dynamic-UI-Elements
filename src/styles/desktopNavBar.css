@@ -1,6 +1,20 @@
 nav.desktopNav {
     font-size: 1.5rem;
     border-radius: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: "Roboto-500";
+    color: var(--slate-200);
+}
+
+nav.desktopNav .navActive {
+    color: var(--slate-800);
+}
+
+nav.desktopNav:hover {
+    background-color: var(--slate-400);
+    /* color: var(--slate-800); */
+
 }
 
 nav.desktopNav .navTitle {
@@ -15,7 +29,7 @@ nav.desktopNav .navList {
     padding: 0;
     list-style: none;
     min-width: 10vw;
-    background-color: var(--slate-300);
+    background-color: var(--slate-400);
     border-radius: 4px;
 }
 
@@ -41,10 +55,11 @@ nav.desktopNav .navList a {
     color: inherit;
     font-size: 1.2rem;
     padding: 8px;
+    color: var(--slate-800);
 }
 
 nav.desktopNav .navList li:hover {
-    background-color: var(--slate-400);
+    background-color: var(--slate-500);
 }
 
 nav.desktopNav .navShow {
@@ -57,9 +72,7 @@ nav.desktopNav .navHide {
     height: 0;
 }
 
-nav.desktopNav .navActive {
-    color: var(--slate-200);
-}
+
 
 @media screen and (max-width: 610px) {
     nav.desktopNav * {

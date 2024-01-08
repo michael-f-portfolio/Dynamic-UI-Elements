@@ -25,14 +25,26 @@ export default class DesktopNavBar {
 
     elementToAppendTo.appendChild(this.navBar);
 
-    this.navBar.addEventListener("mouseover", () => {
-      this.navBarUnorderedList.classList.replace("navHide", "navShow");
-      this.navTitleContainer.classList.add("navActive");
+    this.navBar.addEventListener("click", () => {
+      if (this.navBarUnorderedList.classList.contains("navHide")) {
+        this.navBarUnorderedList.classList.replace("navHide", "navShow");
+        this.navTitleContainer.classList.add("navActive");
+      } else {
+        this.navBarUnorderedList.classList.replace("navShow", "navHide");
+        this.navTitleContainer.classList.remove("navActive");
+      }
     });
 
-    this.navBar.addEventListener("mouseleave", () => {
-      this.navBarUnorderedList.classList.replace("navShow", "navHide");
-      this.navTitleContainer.classList.remove("navActive");
+    window.addEventListener("click", (event) => {
+      if (!event.target.classList.contains("navTitle")) {
+        this.navBarUnorderedList.classList.replace("navShow", "navHide");
+        this.navTitleContainer.classList.remove("navActive");
+      }
     });
+
+    // this.navBar.addEventListener("mouseleave", () => {
+    //   this.navBarUnorderedList.classList.replace("navShow", "navHide");
+    //   this.navTitleContainer.classList.remove("navActive");
+    // });
   }
 }
