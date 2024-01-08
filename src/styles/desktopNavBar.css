@@ -4,7 +4,7 @@ nav.desktopNav {
     padding-left: 8px;
     padding-right: 8px;
     font-family: "Roboto-500";
-    color: var(--slate-200);
+    color: var(--slate-800);
 }
 
 nav.desktopNav .navActive {
